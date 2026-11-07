@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "8570ade8b8ba51acb79b",
+  "position": {
+    "x": 360,
+    "y": 96.666666666666671,
+    "z": 2000,
+    "height": 123.33333333333334,
+    "width": 280,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Median Asking Price"
+                }
+              },
+              "queryRef": "FactListing.Median Asking Price",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Typical asking price'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

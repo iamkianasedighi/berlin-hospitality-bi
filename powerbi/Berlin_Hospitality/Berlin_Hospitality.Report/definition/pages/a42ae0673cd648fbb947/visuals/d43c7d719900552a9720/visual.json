@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "d43c7d719900552a9720",
+  "position": {
+    "x": 73.333333333333343,
+    "y": 96.666666666666671,
+    "z": 4000,
+    "height": 123.33333333333334,
+    "width": 286.66666666666669,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Listings"
+                }
+              },
+              "queryRef": "FactListing.Listings",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comparable listings'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ea90e7016f155ef6aef9",
+  "position": {
+    "x": 931.66666666666674,
+    "y": 96.666666666666671,
+    "z": 5000,
+    "height": 123.33333333333334,
+    "width": 303.33333333333337,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Average Minimum Nights"
+                }
+              },
+              "queryRef": "FactListing.Average Minimum Nights",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mean minimum stay (nights)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

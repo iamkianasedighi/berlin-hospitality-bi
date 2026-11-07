@@ -1,0 +1,349 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "0e70f85248735941b338",
+  "position": {
+    "x": 12.349955610646745,
+    "y": 380.10418934990537,
+    "z": 1000,
+    "height": 299.1433692356656,
+    "width": 1244.6010820951776,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDistrict"
+                    }
+                  },
+                  "Property": "District"
+                }
+              },
+              "queryRef": "DimDistrict.District",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCapacity"
+                    }
+                  },
+                  "Property": "CapacityLabel"
+                }
+              },
+              "queryRef": "DimCapacity.CapacityLabel",
+              "active": true,
+              "displayName": "Guests"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Listings"
+                }
+              },
+              "queryRef": "FactListing.Listings",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Median Asking Price"
+                }
+              },
+              "queryRef": "FactListing.Median Asking Price",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Lower Quartile Price"
+                }
+              },
+              "queryRef": "FactListing.Lower Quartile Price",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Upper Quartile Price"
+                }
+              },
+              "queryRef": "FactListing.Upper Quartile Price",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "District Price Difference %"
+                }
+              },
+              "queryRef": "FactListing.District Price Difference %",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Comparable Sample Status"
+                }
+              },
+              "queryRef": "FactListing.Comparable Sample Status",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DimCapacity"
+                  }
+                },
+                "Property": "CapacityLabel"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D0D0D0'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'District × guest capacity benchmarks'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "dec999ec04abdcc75558",
+        "displayName": "Guests",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimCapacity"
+              }
+            },
+            "Property": "CapacityLabel"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a7e0bcbc02e640a0cdd3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimDistrict"
+              }
+            },
+            "Property": "District"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bb73e1420e9e006b0b54",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactListing"
+              }
+            },
+            "Property": "Listings"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b9b5a5300259b1033a23",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactListing"
+              }
+            },
+            "Property": "Median Asking Price"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2d01f07d43314ceb09b6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactListing"
+              }
+            },
+            "Property": "Lower Quartile Price"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "09822c263e6867ba2569",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactListing"
+              }
+            },
+            "Property": "Upper Quartile Price"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4b704705431acbd24be1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactListing"
+              }
+            },
+            "Property": "District Price Difference %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b013af5400995ba2992",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactListing"
+              }
+            },
+            "Property": "Comparable Sample Status"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+expression pDataFolder = "K:\SQL projects\Berlin_Hospitality_BI\build" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: dff72750-9078-4300-bc61-295965fc93b7
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "bbb7cd244cec5a50b10b",
+  "position": {
+    "x": 37.714320591517833,
+    "y": 259.85711233956556,
+    "z": 5000,
+    "height": 120,
+    "width": 365,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Lower Quartile Price"
+                }
+              },
+              "queryRef": "FactListing.Lower Quartile Price",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lower quartile  ·  P25'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

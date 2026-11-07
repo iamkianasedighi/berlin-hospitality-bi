@@ -1,0 +1,28 @@
+table DimDistrict
+	lineageTag: 3afeb97a-f9d7-4230-bfaf-70250915ceb8
+
+	column DistrictID
+		dataType: int64
+		isHidden
+		lineageTag: b3ec2506-c68d-401e-8767-a2dfd3a75891
+		summarizeBy: none
+		sourceColumn: DistrictID
+
+	column District
+		dataType: string
+		lineageTag: 9cd6ee85-7051-4a4d-be24-09a7cd6304f4
+		summarizeBy: none
+		sourceColumn: District
+
+	partition DimDistrict = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(pDataFolder & "\dim_district.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"DistrictID", Int64.Type}, {"District", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

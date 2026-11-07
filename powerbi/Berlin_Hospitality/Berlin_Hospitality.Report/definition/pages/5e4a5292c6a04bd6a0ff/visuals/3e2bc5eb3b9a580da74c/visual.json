@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "3e2bc5eb3b9a580da74c",
+  "position": {
+    "x": 452.71432059151755,
+    "y": 259.85711233956556,
+    "z": 2000,
+    "height": 120,
+    "width": 365,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Median Asking Price"
+                }
+              },
+              "queryRef": "FactListing.Median Asking Price",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Median  ·  P50'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

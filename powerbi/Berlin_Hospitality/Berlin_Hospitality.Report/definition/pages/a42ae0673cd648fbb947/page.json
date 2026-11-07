@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a42ae0673cd648fbb947",
+  "displayName": "01  |  Berlin market",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720
+}

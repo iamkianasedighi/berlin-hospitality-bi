@@ -1,0 +1,28 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated data
+build/
+data/raw/
+
+# Power BI local files
+**/.pbi/
+*.pbix
+*.pbit
+
+# Local configuration
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+
+# Local archives
+*.zip
+
+# Optional local preview
+preview/

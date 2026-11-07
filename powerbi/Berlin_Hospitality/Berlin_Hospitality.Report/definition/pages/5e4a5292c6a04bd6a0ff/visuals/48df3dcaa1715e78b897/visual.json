@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "48df3dcaa1715e78b897",
+  "position": {
+    "x": 925.71428571428578,
+    "y": 122.85714285714286,
+    "z": 3000,
+    "height": 102.85714285714286,
+    "width": 321.42857142857144,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Comparable Sample Status"
+                }
+              },
+              "queryRef": "FactListing.Comparable Sample Status",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Evidence check'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

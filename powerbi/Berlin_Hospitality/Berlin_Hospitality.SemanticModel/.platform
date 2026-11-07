@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Berlin_Hospitality"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "aa20731d-82f5-4434-ba81-5f6b36962a5d"
+  }
+}

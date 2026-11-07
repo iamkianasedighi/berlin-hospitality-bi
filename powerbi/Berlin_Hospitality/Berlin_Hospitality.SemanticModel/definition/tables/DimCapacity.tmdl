@@ -1,0 +1,28 @@
+table DimCapacity
+	lineageTag: 67894b0a-e0bd-4bc4-9f7e-79261aa25dd6
+
+	column Capacity
+		dataType: int64
+		isHidden
+		lineageTag: 0a9b6656-8f54-445a-9b7d-d6dc00cc2bc6
+		summarizeBy: none
+		sourceColumn: Capacity
+
+	column CapacityLabel
+		dataType: string
+		lineageTag: 0b76dd3f-0156-40b3-81c5-5b17d8955e11
+		summarizeBy: none
+		sourceColumn: CapacityLabel
+
+	partition DimCapacity = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(pDataFolder & "\dim_capacity.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Capacity", Int64.Type}, {"CapacityLabel", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

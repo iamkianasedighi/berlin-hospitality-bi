@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "c511ddeb5e6d5e9bb2ee",
+  "position": {
+    "x": 640,
+    "y": 96.666666666666671,
+    "z": 3000,
+    "height": 123.33333333333334,
+    "width": 291.66666666666669,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactListing"
+                    }
+                  },
+                  "Property": "Price Middle Range"
+                }
+              },
+              "queryRef": "FactListing.Price Middle Range",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Middle 50% price spread'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ed044d9928b7414031be",
+  "position": {
+    "x": 0,
+    "y": 678.57142857142867,
+    "z": 7000,
+    "height": 41.428571428571431,
+    "width": 651.42857142857144,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Source: Inside Airbnb · Snapshot: 19 Sep 2026 · Asking prices, not actual booking revenue.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#666666"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

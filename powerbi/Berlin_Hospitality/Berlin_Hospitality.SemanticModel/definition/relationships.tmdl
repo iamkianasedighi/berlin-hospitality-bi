@@ -1,0 +1,8 @@
+relationship 5e0e0a70-30de-44f6-836f-8f7ff91c26cc
+	fromColumn: FactListing.DistrictID
+	toColumn: DimDistrict.DistrictID
+
+relationship ae3d3719-251e-458e-9b98-982f5ea0dcd6
+	fromColumn: FactListing.Capacity
+	toColumn: DimCapacity.Capacity
+
